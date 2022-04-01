@@ -50,6 +50,8 @@ def one(items):
  else: 
         return "Please enter a list"
 
+print(one(['apple', 'banana', 'orange', 'orange', 'apple', 'apple']))
+
       
 
 # <QUESTION 3>
@@ -66,11 +68,22 @@ def one(items):
 # two(3, 1.5, '*') → 4.5
 # two(-5, 2, '/') → -2.5
 
-def two(a, b, operator):
-  result = eval(a + operator + b)
-  return result
+# def two(a, b, operator):
+#   result = eval(a + operator + b)
+#   return result
    
-print(two(2,4,'+'))
+# print(two(2,4,'+'))
+
+def two(a, b, operator):
+
+ user_result = eval(str(a) + operator + str(b))
+
+ return user_result
+
+print(two(2, 4, "+"))
+print(two(7,3 ,'-'))
+print(two(3,1.5,'*'))
+print(two(-5,2,'/'))
 
 
 
