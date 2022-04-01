@@ -13,15 +13,17 @@
 
     # What was the name of the function we have seen which changes the case of a string?  Use your CLI to access the Python documentation and get help(str).
     
-# def endsPy(input):
-     
-#      if len(input[-2]) == 'py':
-#           return True
-#      else:
-#          return False
+def endsPy(input):
+     str = input.upper()
+     if str[-2:] == 'PY':
+          return True
+     else:
+         return False
 
-# print(endsPy('ilovepy'))
-# print(endsPy('welovepy'))
+print(endsPy('ilovepy'))
+print(endsPy('welovepy'))
+print(endsPy('welovepyforreal'))
+print(endsPy('pyiscool'))
 
     
 # <QUESTION 2>
@@ -36,24 +38,19 @@
 # one(['apple', 'banana', 'orange', 'orange', 'apple', 'apple']) → {'apple':3, 'orange':2, 'banana':1}
 # one(['tic', 'tac', 'toe']) → {'tic':1, 'tac':1, 'toe':1}
 
-# list = []
+list = ['apple', 'banana', 'orange', 'orange', 'apple', 'apple']
 
-# def one(items):
-#     count = 0
-#     for key in range(items):
-#         if key == count(items):
-#             return count
+def one(items):
+ if type(items) is list:
+    items_set = set(items)
+    items_dict = dict()
+    for i in items_set: 
+     item_dict[i] = items.count(i)
+    return item_dict
+ else: 
+        return "Please enter a list"
 
-
-
-# new_list = one(['apple','banana','orange','orange','apple','apple'])
-     
-# list.append(new_list)
-# print((list))
-
-
-   
-    
+      
 
 # <QUESTION 3>
 
@@ -69,12 +66,11 @@
 # two(3, 1.5, '*') → 4.5
 # two(-5, 2, '/') → -2.5
 
-# def two(a, b, operator):
-#    sum = a + 'operator' +b 
+def two(a, b, operator):
+  result = eval(a + operator + b)
+  return result
    
-#    return sum(a,b)
-   
-# print(two(2,4,'+'))
+print(two(2,4,'+'))
 
 
 
@@ -95,8 +91,12 @@
 
 # We can use `x ** 0.5` to get the square root of `x`
 
-# def three(num):
-#     pass
+def three(num):
+ while (num ** 0.5) % 1 != 0:
+  num = num - 1
+  return (num)
+
+print(three(7))
 
 # <QUESTION 5>
 
@@ -110,11 +110,15 @@
 
 
 def four(a, b):
-  while b > 0:
-   a, b = b, abs(a - b)
-   return a
-print(four(32,34))
+ (a,b) = (max(a,b), min(a,b))
+ while b > 0:
+  (a,b) = (b, a % b)
+ return a
+
+
+print(four(32,24))
 print(four(18,11))
+print(four(10,50))
     
 
 # <QUESTION 6>
