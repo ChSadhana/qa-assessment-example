@@ -13,9 +13,15 @@
 
     # What was the name of the function we have seen which changes the case of a string?  Use your CLI to access the Python documentation and get help(str).
     
-    
-    def endsPy(input):
-        return ""
+# def endsPy(input):
+     
+#      if len(input[-2]) == 'py':
+#           return True
+#      else:
+#          return False
+
+# print(endsPy('ilovepy'))
+# print(endsPy('welovepy'))
 
     
 # <QUESTION 2>
@@ -29,9 +35,25 @@
 
 # one(['apple', 'banana', 'orange', 'orange', 'apple', 'apple']) → {'apple':3, 'orange':2, 'banana':1}
 # one(['tic', 'tac', 'toe']) → {'tic':1, 'tac':1, 'toe':1}
+
+# list = []
+
+# def one(items):
+#     count = 0
+#     for key in range(items):
+#         if key == count(items):
+#             return count
+
+
+
+# new_list = one(['apple','banana','orange','orange','apple','apple'])
+     
+# list.append(new_list)
+# print((list))
+
+
+   
     
-def one(items):
-    pass
 
 # <QUESTION 3>
 
@@ -47,8 +69,14 @@ def one(items):
 # two(3, 1.5, '*') → 4.5
 # two(-5, 2, '/') → -2.5
 
-def two(a, b, operator):
-    pass
+# def two(a, b, operator):
+#    sum = a + 'operator' +b 
+   
+#    return sum(a,b)
+   
+# print(two(2,4,'+'))
+
+
 
 # <QUESTION 4>
 
@@ -67,8 +95,8 @@ def two(a, b, operator):
 
 # We can use `x ** 0.5` to get the square root of `x`
 
-def three(num):
-    pass
+# def three(num):
+#     pass
 
 # <QUESTION 5>
 
@@ -80,8 +108,14 @@ def three(num):
 # four(18, 11) → 1
 # four(10, 50) → 10
 
+
 def four(a, b):
-    pass
+  while b > 0:
+   a, b = b, abs(a - b)
+   return a
+print(four(32,34))
+print(four(18,11))
+    
 
 # <QUESTION 6>
 
@@ -100,5 +134,5 @@ def four(a, b):
 # five('hello world') → 'gdkkn vnqkc'
 # five('54321') → '54321'
 
-def five(string):
-    pass
+# def five(string):
+#     pass
